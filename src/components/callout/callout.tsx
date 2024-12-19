@@ -1,6 +1,12 @@
 import type { PropsWithChildren } from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { variants, type CallOutVariants } from './callout.variants';
 
-export const Callout = () => {
-  return <div>Callout</div>;
+type CalloutProps = PropsWithChildren<CallOutVariants & { title: string }>;
+export const Callout: React.FC<CalloutProps> = ({ children, title, variant }) => {
+  return (
+    <div className={variants({ variant })}>
+      <h2 className="font-semibold">{title}</h2>
+      <p>{children}</p>
+    </div>
+  );
 };
