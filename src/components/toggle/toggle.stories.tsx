@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { Toggle } from './toggle';
 
 const meta = {
@@ -10,4 +10,4 @@ const meta = {
 } satisfies Meta<typeof Toggle>;
 
 export default meta;
-type Story = StoryObj<typeof Toggle>;
+// type Story = StoryObj<typeof Toggle>;
